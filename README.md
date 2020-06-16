@@ -1,9 +1,7 @@
-# Playing with Django Sessions
+# Inegrating Couchbase with Django
 
-This repository walks through sessions in Django.
+For the meantime, we will be integrating Couchbase Python SDK with Django since it's difficult to find an up-to-date ODM.
 
 ## References
 
-- [Managing Sessions in Django](https://medium.com/better-programming/managing-sessions-in-django-92ef72db4c63)
-- [Cookies and Sessions](https://www.tangowithdjango.com/book17/chapters/cookie.html)
-- [Python | Sessions framework using Django](https://www.geeksforgeeks.org/python-sessions-framework-using-django/)
+- [Couchbase - Install and Start Using the Python SDK with Couchbase Server](https://docs.couchbase.com/python-sdk/3.0/hello-world/start-using-sdk.html)
