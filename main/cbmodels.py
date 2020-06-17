@@ -1,19 +1,8 @@
-# Inegrating Couchbase with Django
-
-For the meantime, we will be integrating Couchbase Python SDK with Django since it's difficult to find an up-to-date ODM.
-
+from couchbase.cluster import Cluster, ClusterOptions
+from couchbase_core.cluster import PasswordAuthenticator
 
 
-## Adding a Couchbase Model
-
-**Disclaimer:** The contents in this section are experimental and open for changes.
-
-Here's a sample snippet to creating new Couchbase models. Take note that the new model should inherit from `CouchbaseModel` implemented in [main/cbmodels.py](/main/cbmodels.py).
-
-```python
 class CouchbaseModel:
-    # Possible Improvement Item - We could get the bucket name from settings.py
-    # via django.conf.settings (assuming that CB_BUCKET_NAME is specified in settings.py).
     CB_BUCKET_NAME = 'django'
 
     def __init__(self):
@@ -39,11 +28,8 @@ class CouchbaseModel:
             pass
 
         self.collection = bucket.default_collection()
-```
 
-Here's another snippet showing a new Couchbase model.
 
-```python
 class UserCouchbaseModel(CouchbaseModel):
     def __init__(self):
         super(UserCouchbaseModel, self).__init__()
@@ -73,14 +59,3 @@ class UserCouchbaseModel(CouchbaseModel):
 
     def get_data(self, identifier):
         return self.collection.get(identifier)
-```
-
-
-## Sample Output (Screenshots)
-
-![screenshot_01](/images/screenshot_01.png)
-
-
-## References
-
-- [Couchbase - Install and Start Using the Python SDK with Couchbase Server](https://docs.couchbase.com/python-sdk/3.0/hello-world/start-using-sdk.html)
