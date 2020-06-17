@@ -2,4 +2,16 @@
 
 {% block content %}
     <h1>Integrating Couchbase with Django</h1>
+
+    <h2>Demo - Personal Information (Derived from Couchbase)</h2>
+
+    <p>Name &mdash; {{ first_name }} {{ last_name }}</p>
+    <p>Email &mdash; {{ email }}</p>
+    <p>Hobbies</p>
+
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
 {% endblock content %}
