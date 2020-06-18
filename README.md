@@ -3,10 +3,16 @@
 For the meantime, we will be integrating Couchbase Python SDK with Django since it's difficult to find an up-to-date ODM.
 
 
+## Experimental Contents
+
+**Disclaimer:** The contents in this repo are experimental and open for changes.
+
+Here's the list of improvement items that we aim to fully implement in the future...
+- Integrating [marshmallow](https://marshmallow.readthedocs.io/en/stable/) and [Couchbase Python client](https://github.com/couchbase/couchbase-python-client) with Django.
+- Flushing buckets via Couchbase Python client.
+
 
 ## Adding a Couchbase Model
-
-**Disclaimer:** The contents in this section are experimental and open for changes.
 
 Here's a sample snippet to creating new Couchbase models. Take note that the new model should inherit from `CouchbaseModel` implemented in [main/cbmodels.py](/main/cbmodels.py).
 
