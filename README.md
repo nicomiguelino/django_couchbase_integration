@@ -84,3 +84,4 @@ class UserCouchbaseModel(CouchbaseModel):
 ## References
 
 - [Couchbase - Install and Start Using the Python SDK with Couchbase Server](https://docs.couchbase.com/python-sdk/3.0/hello-world/start-using-sdk.html)
+- [Official Marshmallow Documentation](https://marshmallow.readthedocs.io/en/stable/)
